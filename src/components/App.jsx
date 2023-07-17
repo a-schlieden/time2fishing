@@ -10,7 +10,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React Time 2 Fishing template
+      React Time 2 Fishing
     </div>
   );
 };
