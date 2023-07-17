@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/time2fishing/static/css/main.7acaea2f.css",
+    "main.js": "/time2fishing/static/js/main.edeedc3e.js",
+    "index.html": "/time2fishing/index.html",
+    "main.7acaea2f.css.map": "/time2fishing/static/css/main.7acaea2f.css.map",
+    "main.edeedc3e.js.map": "/time2fishing/static/js/main.edeedc3e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.edeedc3e.js"
+  ]
+}
