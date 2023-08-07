@@ -1,12 +1,10 @@
 [
     {
         "name": "Karpfen",
-        "isOnline": true,
         "id": 1812
     },
     {
         "name": "Hecht",
-        "isOnline": false,
         "id": 1137
     }
 ]

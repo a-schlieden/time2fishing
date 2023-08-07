@@ -1,23 +1,21 @@
 //import { useEffect, useState } from 'react';
 
-//import FilmsList from 'components/FilmsList/FilmsList';
+import FischList from 'components/FischList/FischList';
 //import * as filmsFetch from '../../api/Fetch';
-
+import fishes from 'api/fisches.json';
 
 const Home = () => {
 
-    //const [films, setFilms] = useState([]);
+    //const [fisch, setFilms] = useState([]);
 
     /*    useEffect(() => {
            filmsFetch.fetchTrendingMovies().then(result => {
                setFilms(result.results);
            });
        }, []); */
-
     return (
         <>
-            {/*  <FilmsList filmsArray={films} sublink={'movies/'} /> */}
-            <div>HOME</div>
+            <FischList fischArray={fishes} sublink={'fishes/'} />
         </>
     );
 };
