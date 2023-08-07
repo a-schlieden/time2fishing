@@ -3,7 +3,7 @@ import style from './Header.module.css';
 
 const Items = [
     { to: '/', title: 'Home' },
-    { to: '/movies', title: 'Movies' },
+    { to: '/movies', title: 'FischTackle' },
 ]
 
 const Header = () => {
