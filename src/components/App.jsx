@@ -1,3 +1,5 @@
+//import fishes from 'fisches.json';
+
 export const App = () => {
   return (
     <div
