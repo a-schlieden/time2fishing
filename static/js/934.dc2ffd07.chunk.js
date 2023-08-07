@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktime2fishing=self.webpackChunktime2fishing||[]).push([[934],{934:function(e,i,n){n.r(i);var s=n(184);i.default=function(){return(0,s.jsx)(s.Fragment,{children:(0,s.jsx)("div",{children:"HOME"})})}}}]);
-//# sourceMappingURL=934.dc2ffd07.chunk.js.map
