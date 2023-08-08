@@ -1,23 +1,24 @@
 //import { useState, useEffect, Suspense } from "react";
 import { Suspense } from "react";
-//import { useParams, Outlet, useLocation } from "react-router-dom";
-import { Outlet } from "react-router-dom";
+import { useParams, Outlet, useLocation } from "react-router-dom";
 import { Loader } from 'components/Loader/Loader';
 //import * as filmsFetch from '../../api/Fetch';
 //import MovieMainInfo from "components/MovieMainInfo/MovieMainInfo";
 //import AdditionalLinks from "components/AdditionalLinks/AdditionalLinks";
-//import BackLink from "components/BackLink/BackLink";
+import BackLink from "components/BackLink/BackLink";
+
+import tackles from 'api/tackle.json';
 
 import style from './fischArtComponents.module.css';
 
 
 const FischArtComponents = () => {
     /*  const [FilmDetails, setFilmDetails] = useState([]);
-     const [status, setStatus] = useState('idleNothing');
-     const { movieId } = useParams()
-     const location = useLocation(); */
+     const [status, setStatus] = useState('idleNothing');*/
+    const test = useParams()
+    const location = useLocation();
 
-
+    console.log("movieId", tackles)
     /*     useEffect(() => {
     
             setStatus('pendingLoad');
@@ -29,7 +30,7 @@ const FischArtComponents = () => {
         }, [movieId]);
      */
 
-    /*     const LinkTo = location.state */
+    const LinkTo = location.state
 
 
     return (
@@ -39,7 +40,7 @@ const FischArtComponents = () => {
             {/* 
             {status === 'resolved' &&
                 <> */}
-            {/*  <BackLink link={LinkTo} /> */}
+            <BackLink link={LinkTo} />
 
             {/*     <MovieMainInfo film={FilmDetails} /> */}
 
