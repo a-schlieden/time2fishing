@@ -1,24 +1,29 @@
 //import { useState, useEffect, Suspense } from "react";
 import { Suspense } from "react";
-import { useParams, Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+/* import { useParams, Outlet, useLocation } from "react-router-dom"; */
 import { Loader } from 'components/Loader/Loader';
 //import * as filmsFetch from '../../api/Fetch';
-//import MovieMainInfo from "components/MovieMainInfo/MovieMainInfo";
-//import AdditionalLinks from "components/AdditionalLinks/AdditionalLinks";
+import FischTackle from "components/FischTackle/FischTackle";
 import BackLink from "components/BackLink/BackLink";
 
-import tackles from 'api/tackle.json';
-
-import style from './fischArtComponents.module.css';
+import style from './fischArtDetails.module.css';
 
 
-const FischArtComponents = () => {
+const FischArtDetails = ({ tackleArr }) => {
     /*  const [FilmDetails, setFilmDetails] = useState([]);
      const [status, setStatus] = useState('idleNothing');*/
-    const test = useParams()
+    //const test = tackles;
     const location = useLocation();
-
-    console.log("movieId", tackles)
+    //[]
+    // console.log("location", location.pathname);
+    console.log("Arr", tackleArr);
+    const ThisFischTackles = location.pathname;
+    const test1 = ThisFischTackles.split("/")
+    const test2 = test1[2]
+    console.log("Split ", test2);
+    const some12 = tackleArr.find(option => option.name === test2)
+    console.log(some12.tackle)
     /*     useEffect(() => {
     
             setStatus('pendingLoad');
@@ -41,6 +46,7 @@ const FischArtComponents = () => {
             {status === 'resolved' &&
                 <> */}
             <BackLink link={LinkTo} />
+            <FischTackle tacklesArray={ThisFischTackles} />
 
             {/*     <MovieMainInfo film={FilmDetails} /> */}
 
@@ -57,4 +63,4 @@ const FischArtComponents = () => {
     )
 }
 
-export default FischArtComponents
+export default FischArtDetails

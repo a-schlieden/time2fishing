@@ -1,14 +1,19 @@
 [
     {
-        "name": "Rute",
-        "id": 1812
+        "name": "Karpfen",
+        "id": 18156,
+        "tackle": {
+            "blei": "Blei",
+            "rute": "Rute",
+            "futter": "Fütter"
+        }
     },
     {
-        "name": "Blei",
-        "id": 1137
-    },
-    {
-        "name": "Fütter",
-        "id": 1138
+        "name": "Hecht",
+        "id": 18158,
+        "tackle": [
+            "Blei1",
+            "Rute1"
+        ]
     }
 ]

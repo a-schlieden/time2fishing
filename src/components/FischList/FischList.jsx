@@ -1,16 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
 
-const FischList = ({ fischArray, sublink }) => {
+const FischList = ({ sublink, tackleArr }) => {
     const location = useLocation();
-
     return (
         <div>
-            {fischArray.length > 0 && (
+            {tackleArr.length > 0 && (
                 <ul>
-                    {fischArray.map(fish => (
+                    {tackleArr.map(fish => (
                         <li key={fish.id}>
                             <Link
-                                to={`${sublink ? sublink + fish.id : fish.id}`}
+                                to={`${sublink ? sublink + fish.name : fish.name}`}
                                 state={{ from: location }}
                             >
                                 {fish.name}
