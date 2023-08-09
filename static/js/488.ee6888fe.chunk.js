@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktime2fishing=self.webpackChunktime2fishing||[]).push([[488],{488:function(n,s,e){e.r(s),e.d(s,{default:function(){return a}});var i=e(791),t=e(689),c=e(474),r="fischArtComponents_wrapp__iPqZQ",u=e(184),a=function(){return(0,u.jsx)("div",{className:r,children:(0,u.jsx)(i.Suspense,{fallback:(0,u.jsx)(c.a,{}),children:(0,u.jsx)(t.j3,{})})})}}}]);
-//# sourceMappingURL=488.ee6888fe.chunk.js.map
