@@ -1,4 +1,4 @@
-const FichTackle = ({ tacklesArray }) => {
+const FichTackle = ({ tacklesArray, head }) => {
 
     //const [fisch, setFilms] = useState([]);
 
@@ -7,11 +7,20 @@ const FichTackle = ({ tacklesArray }) => {
                setFilms(result.results);
            });
        }, []); */
+
     return (
         <>
             {/* <FischList fischArray={fishes} sublink={'fishes/'} tackleArr={tackleArray} /> */}
-            <div>FischTackle</div>
-            <div>{tacklesArray}</div>
+            <h2>{head}</h2>
+            <ul>
+                {tacklesArray.map(tackle => (
+                    <li>
+                        <input type="checkbox" />
+                        {tackle}
+                    </li>
+                ))}
+
+            </ul>
         </>
     );
 };

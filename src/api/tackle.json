@@ -2,11 +2,12 @@
     {
         "name": "Karpfen",
         "id": 18156,
-        "tackle": {
-            "blei": "Blei",
-            "rute": "Rute",
-            "futter": "Fütter"
-        }
+        "tackle": [
+            "Blei1",
+            "Rute1",
+            "Pelets",
+            "FuterKorb-metod"
+        ]
     },
     {
         "name": "Hecht",

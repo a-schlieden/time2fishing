@@ -13,17 +13,15 @@ import style from './fischArtDetails.module.css';
 const FischArtDetails = ({ tackleArr }) => {
     /*  const [FilmDetails, setFilmDetails] = useState([]);
      const [status, setStatus] = useState('idleNothing');*/
-    //const test = tackles;
+
     const location = useLocation();
     //[]
-    // console.log("location", location.pathname);
-    console.log("Arr", tackleArr);
     const ThisFischTackles = location.pathname;
-    const test1 = ThisFischTackles.split("/")
-    const test2 = test1[2]
-    console.log("Split ", test2);
-    const some12 = tackleArr.find(option => option.name === test2)
-    console.log(some12.tackle)
+    const FischTacklesArr = ThisFischTackles.split("/")
+    const FischTacklesArrItem = FischTacklesArr[2]
+
+    const AllTacklesForFisch = tackleArr.find(option => option.name === FischTacklesArrItem)
+    //console.log(AllTacklesForFisch.tackle)
     /*     useEffect(() => {
     
             setStatus('pendingLoad');
@@ -46,11 +44,9 @@ const FischArtDetails = ({ tackleArr }) => {
             {status === 'resolved' &&
                 <> */}
             <BackLink link={LinkTo} />
-            <FischTackle tacklesArray={ThisFischTackles} />
+            <FischTackle tacklesArray={AllTacklesForFisch.tackle} head={FischTacklesArrItem} />
 
             {/*     <MovieMainInfo film={FilmDetails} /> */}
-
-            {/*    <AdditionalLinks /> */}
 
             {/*           </>
             } */}
