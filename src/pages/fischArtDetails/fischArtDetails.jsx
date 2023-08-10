@@ -6,6 +6,7 @@ import { Loader } from 'components/Loader/Loader';
 //import * as filmsFetch from '../../api/Fetch';
 import FischTackle from "components/FischTackle/FischTackle";
 import BackLink from "components/BackLink/BackLink";
+import ClearButton from "components/ClearButton/ClearButton";
 
 import style from './fischArtDetails.module.css';
 
@@ -45,7 +46,7 @@ const FischArtDetails = ({ tackleArr }) => {
                 <> */}
             <BackLink link={LinkTo} />
             <FischTackle tacklesArray={AllTacklesForFisch.tackle} head={FischTacklesArrItem} />
-
+            <ClearButton />
             {/*     <MovieMainInfo film={FilmDetails} /> */}
 
             {/*           </>
@@ -59,4 +60,4 @@ const FischArtDetails = ({ tackleArr }) => {
     )
 }
 
-export default FischArtDetails
+export default FischArtDetails;
