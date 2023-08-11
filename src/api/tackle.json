@@ -3,18 +3,50 @@
         "name": "Karpfen",
         "id": 18156,
         "tackle": [
-            "Blei1",
-            "Rute1",
-            "Pelets",
-            "FuterKorb-metod"
+            {
+                "id": 1,
+                "name": "FuterKorb-metod"
+            },
+            {
+                "id": 2,
+                "name": "Pelets"
+            },
+            {
+                "id": 3,
+                "name": "Rute"
+            },
+            {
+                "id": 4,
+                "name": "Blei"
+            }
         ]
     },
     {
         "name": "Hecht",
         "id": 18158,
         "tackle": [
-            "Blei1",
-            "Rute1"
+            {
+                "id": 1,
+                "name": "Blei hecht"
+            },
+            {
+                "id": 2,
+                "name": "Rute hecht"
+            }
+        ]
+    },
+    {
+        "name": "Silberkarpfen",
+        "id": 181545,
+        "tackle": [
+            {
+                "id": 1,
+                "name": "Blei hard"
+            },
+            {
+                "id": 2,
+                "name": "Rute hard"
+            }
         ]
     }
 ]

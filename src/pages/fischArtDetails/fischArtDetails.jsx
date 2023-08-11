@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 /* import { useParams, Outlet, useLocation } from "react-router-dom"; */
 import { Loader } from 'components/Loader/Loader';
-//import * as filmsFetch from '../../api/Fetch';
+
 import FischTackle from "components/FischTackle/FischTackle";
 import BackLink from "components/BackLink/BackLink";
 import ClearButton from "components/ClearButton/ClearButton";
@@ -23,19 +23,8 @@ const FischArtDetails = ({ tackleArr }) => {
 
     const AllTacklesForFisch = tackleArr.find(option => option.name === FischTacklesArrItem)
     //console.log(AllTacklesForFisch.tackle)
-    /*     useEffect(() => {
-    
-            setStatus('pendingLoad');
-    
-            filmsFetch.fetchMoviesById(movieId).then(movie => {
-                setFilmDetails(movie)
-                setStatus('resolved');
-            });
-        }, [movieId]);
-     */
 
     const LinkTo = location.state
-
 
     return (
         <div className={style.wrapp}>
@@ -47,10 +36,6 @@ const FischArtDetails = ({ tackleArr }) => {
             <BackLink link={LinkTo} />
             <FischTackle tacklesArray={AllTacklesForFisch.tackle} head={FischTacklesArrItem} />
             <ClearButton />
-            {/*     <MovieMainInfo film={FilmDetails} /> */}
-
-            {/*           </>
-            } */}
 
             <Suspense fallback={<Loader />}>
                 <Outlet />
