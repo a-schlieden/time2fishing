@@ -4,6 +4,8 @@ import style from './Header.module.css';
 const Items = [
     { to: '/', title: 'Home' },
     /*  { to: '/movies', title: 'FischTackle' }, */
+    // { to: '/ru', title: 'RU' },
+    // { to: '/ua', title: 'UA' },
 ]
 
 const Header = () => {
