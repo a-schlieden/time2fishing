@@ -26,11 +26,11 @@
         "id": 18158,
         "tackle": [
             {
-                "id": 1,
+                "id": 5,
                 "name": "Blei hecht"
             },
             {
-                "id": 2,
+                "id": 6,
                 "name": "Rute hecht"
             }
         ]
@@ -40,11 +40,11 @@
         "id": 181545,
         "tackle": [
             {
-                "id": 1,
+                "id": 7,
                 "name": "Blei hard"
             },
             {
-                "id": 2,
+                "id": 8,
                 "name": "Rute hard"
             }
         ]
