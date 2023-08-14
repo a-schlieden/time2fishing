@@ -1,8 +1,12 @@
-const ClearButton = () => {
+const ClearButton = ({ reset }) => {
+
+    /*   const some = () => {
+          localStorage.removeItem(LOCAL_STORAGE_TACKLE);
+      } */
 
     return (
         <>
-            <button>Clear</button>
+            <button onClick={reset}>Clear</button>
         </>
     );
 };

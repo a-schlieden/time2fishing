@@ -1,26 +1,14 @@
 
 import { useState, useEffect } from "react";
-// import { nanoid } from "nanoid";
 
-const LOCAL_STORAGE_TACKLE = "tackles"
 
-const FichTackle = ({ tacklesArray, head }) => {
+const FichTackle = ({ tacklesArray, head, ls }) => {
 
-    //const [fisch, setFilms] = useState([]);
-
-    /*  useEffect(() => {
-           filmsFetch.fetchTrendingMovies().then(result => {
-               setFilms(result.results);
-           });
-       }, []); */
-
-    // const [chacked, setChacked] = useState(false);
-    const [savedTackle, setSavedTackle] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_TACKLE)) ?? []);
-
+    const [savedTackle, setSavedTackle] = useState(JSON.parse(window.localStorage.getItem(ls)) ?? []);
 
     useEffect(() => {
-        window.localStorage.setItem(LOCAL_STORAGE_TACKLE, JSON.stringify(savedTackle));
-    }, [savedTackle]);
+        window.localStorage.setItem(ls, JSON.stringify(savedTackle));
+    }, [savedTackle, ls]);
 
 
     const AddToLocalStorage = (item) => {
@@ -29,19 +17,13 @@ const FichTackle = ({ tacklesArray, head }) => {
             name: item.name,
         }
         setSavedTackle((prevState) => [newTackle, ...prevState]);
-        console.log(" add ite", item)
-        // setChacked(false)
     }
 
     const RemoveFromLocalStorage = (item) => {
-        console.log("remove Item")
-        console.log(item)
-        setSavedTackle(savedTackle.filter((tak) => tak.id !== item.id))
-        // setChacked(true)
+        setSavedTackle(savedTackle.filter((tak) => tak.id !== item.id));
     }
 
     const isInLokalStorage = savedTackle.map(item => item.id);
-
 
     return (
         <>
@@ -53,12 +35,13 @@ const FichTackle = ({ tacklesArray, head }) => {
                             id={tackle.id}
                             name="vehicle4"
                             checked={isInLokalStorage.some(value => value === tackle.id)}
-                            //onChange={checked ? RemoveFromLocalStorage : AddToLocalStorage}
-                            onChange={isInLokalStorage.some(value => value === tackle.id)
-                                ? () => RemoveFromLocalStorage(tackle) : () => AddToLocalStorage(tackle)
+                            onChange={
+                                isInLokalStorage.some(value => value === tackle.id)
+                                    ? () => RemoveFromLocalStorage(tackle)
+                                    : () => AddToLocalStorage(tackle)
                             }
                         />
-                        {tackle.name}
+                        <span>{tackle.name}</span>
                     </li>
                 ))}
 
