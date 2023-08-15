@@ -1,4 +1,6 @@
 
+import { useState, useEffect } from "react";
+
 import { Suspense } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Loader } from 'components/Loader/Loader';
@@ -22,15 +24,47 @@ const FischArtDetails = ({ tackleArr }) => {
 
     const LinkTo = location.state;
 
-    const clearBtn = () => {
-        localStorage.removeItem(LOCAL_STORAGE_TACKLE);
+    //---------------------------------------------
+
+    const [savedTackle, setSavedTackle] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_TACKLE)) ?? []);
+
+    useEffect(() => {
+        window.localStorage.setItem(LOCAL_STORAGE_TACKLE, JSON.stringify(savedTackle));
+    }, [savedTackle, LOCAL_STORAGE_TACKLE]);
+
+
+    const AddToLocalStorage = (item) => {
+        const newTackle = {
+            id: item.id,
+            name: item.name,
+        }
+        setSavedTackle((prevState) => [newTackle, ...prevState]);
     }
+
+    const RemoveFromLocalStorage = (item) => {
+        setSavedTackle(savedTackle.filter((tak) => tak.id !== item.id));
+    }
+
+    const clearBtn = () => {
+        //localStorage.removeItem(LOCAL_STORAGE_TACKLE);
+        setSavedTackle([])
+    }
+
+    const isInLokalStorage = savedTackle.map(item => item.id);
 
     return (
         <div className={style.wrapp}>
 
             <BackLink link={LinkTo} />
-            <FischTackle tacklesArray={AllTacklesForFisch.tackle} head={FischTacklesArrItem} ls={LOCAL_STORAGE_TACKLE} />
+            <FischTackle
+                tacklesArray={AllTacklesForFisch.tackle}
+                head={FischTacklesArrItem}
+                ls={LOCAL_STORAGE_TACKLE}
+                // savedTaklesState={savedTackle}
+                fnAddToLS={AddToLocalStorage}
+                fnRemoveFromLS={RemoveFromLocalStorage}
+                isInLS={isInLokalStorage}
+            />
             <ClearButton reset={() => clearBtn()} />
 
             <Suspense fallback={<Loader />}>
