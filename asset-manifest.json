@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/time2fishing/static/css/main.35fd2275.css",
-    "main.js": "/time2fishing/static/js/main.ca2e1d08.js",
+    "main.js": "/time2fishing/static/js/main.782e9da6.js",
     "static/js/932.5ccb44e3.chunk.js": "/time2fishing/static/js/932.5ccb44e3.chunk.js",
     "static/css/782.bf57e171.chunk.css": "/time2fishing/static/css/782.bf57e171.chunk.css",
     "static/js/782.bb3625cb.chunk.js": "/time2fishing/static/js/782.bb3625cb.chunk.js",
     "index.html": "/time2fishing/index.html",
     "main.35fd2275.css.map": "/time2fishing/static/css/main.35fd2275.css.map",
-    "main.ca2e1d08.js.map": "/time2fishing/static/js/main.ca2e1d08.js.map",
+    "main.782e9da6.js.map": "/time2fishing/static/js/main.782e9da6.js.map",
     "932.5ccb44e3.chunk.js.map": "/time2fishing/static/js/932.5ccb44e3.chunk.js.map",
     "782.bf57e171.chunk.css.map": "/time2fishing/static/css/782.bf57e171.chunk.css.map",
     "782.bb3625cb.chunk.js.map": "/time2fishing/static/js/782.bb3625cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.35fd2275.css",
-    "static/js/main.ca2e1d08.js"
+    "static/js/main.782e9da6.js"
   ]
 }
