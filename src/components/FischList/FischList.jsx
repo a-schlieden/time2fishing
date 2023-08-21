@@ -9,7 +9,7 @@ const FischList = ({ sublink, tackleArr }) => {
                     {tackleArr.map(fish => (
                         <li key={fish.id}>
                             <Link
-                                to={`${sublink ? sublink + fish.name : fish.name}`}
+                                to={`${sublink ? sublink + fish.loc : fish.loc}`}
                                 state={{ from: location }}
                             >
                                 {fish.name}

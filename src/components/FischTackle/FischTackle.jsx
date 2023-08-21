@@ -2,7 +2,7 @@
 //import { useState, useEffect } from "react";
 
 
-const FichTackle = ({ tacklesArray, head, ls, fnAddToLS, fnRemoveFromLS, isInLS }) => {
+const FichTackle = ({ tacklesArray, head, fnAddToLS, fnRemoveFromLS, isInLS }) => {
     //const FichTackle = ({ tacklesArray, head, ls }) => {
 
     //const [savedTackle, setSavedTackle] = useState(JSON.parse(window.localStorage.getItem(ls)) ?? []);
@@ -32,6 +32,8 @@ const FichTackle = ({ tacklesArray, head, ls, fnAddToLS, fnRemoveFromLS, isInLS 
             <h2>{head}</h2>
             <ul>
                 {tacklesArray.map(tackle => (
+
+
                     <li key={tackle.id} >
                         <input type="checkbox"
                             id={tackle.id}
@@ -48,6 +50,7 @@ const FichTackle = ({ tacklesArray, head, ls, fnAddToLS, fnRemoveFromLS, isInLS 
                         />
                         <span>{tackle.name}</span>
                     </li>
+
                 ))}
 
             </ul>
