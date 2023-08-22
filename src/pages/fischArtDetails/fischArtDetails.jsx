@@ -20,11 +20,11 @@ const FischArtDetails = ({ tackleArr }) => {
     const FischTacklesArr = ThisFischTackles.split("/");
     const FischTacklesArrItem = FischTacklesArr[2];
 
+
     const AllTacklesForFisch = tackleArr.find(option => option.loc === FischTacklesArrItem);
 
     const LinkTo = location.state;
-    console.log("tackleArr", tackleArr)
-    console.log("FischTacklesArrItem", FischTacklesArrItem)
+
 
     //---------------------------------------------
 
@@ -59,9 +59,7 @@ const FischArtDetails = ({ tackleArr }) => {
             <BackLink link={LinkTo} />
             <FischTackle
                 tacklesArray={AllTacklesForFisch.tackle}
-                head={FischTacklesArrItem}
-                // ls={LOCAL_STORAGE_TACKLE}
-                // savedTaklesState={savedTackle}
+                head={AllTacklesForFisch.name}
                 fnAddToLS={AddToLocalStorage}
                 fnRemoveFromLS={RemoveFromLocalStorage}
                 isInLS={isInLokalStorage}
