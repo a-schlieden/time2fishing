@@ -1,5 +1,12 @@
+
 import { NavLink } from "react-router-dom";
 import style from './Header.module.css';
+
+
+
+//import NoRuImg from '../../img/marka.jpg';
+
+
 
 const Items = [
     { to: '/', title: 'Home' },
@@ -7,23 +14,31 @@ const Items = [
     // { to: '/ru', title: 'RU' },
     // { to: '/ua', title: 'UA' },
 ]
-//const languages = []
+/* const Languages = [
+    { to: '../../img/', title: 'RU' },
+    { to: '/de', title: 'DE' },
+] */
+
+
 
 const Header = () => {
     return (
         <header>
-            <nav className={style.nav}>
-                <ul>
-                    {Items.map(item =>
-                        <li key={item.title}>
-                            <NavLink
-                                className={({ isActive }) => isActive ? style.navActive : undefined}
-                                to={item.to}>
-                                {item.title}
-                            </NavLink>
-                        </li>)}
-                </ul>
-            </nav>
+            <div >
+                <nav className={style.nav}>
+                    <ul>
+                        {Items.map(item =>
+                            <li key={item.title}>
+                                <NavLink
+                                    className={({ isActive }) => isActive ? style.navActive : undefined}
+                                    to={item.to}>
+                                    {item.title}
+                                </NavLink>
+                            </li>)}
+                    </ul>
+
+                </nav>
+            </div>
         </header>
     )
 }

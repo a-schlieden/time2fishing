@@ -1,21 +1,3 @@
-//import fishes from 'fisches.json';
-
-//export const App = () => {
-// return (
-//    <div
-//      style={{
-//        height: '100vh',
-//        display: 'flex',
-//        justifyContent: 'center',
-//        alignItems: 'center',
-//        fontSize: 40,
-//        color: '#010101'
-//      }}
-//    >
-//      React Time 2 Fishing
-//    </div>
-//  );
-//};
 
 import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
