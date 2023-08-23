@@ -1,23 +1,17 @@
-//import { NavLink, Link } from "react-router-dom";
-//import style from './Header.module.css';
 
-
-
-//import NoRuImg from './marka_korabl.jpg';
-
-/* const Languages = [
-    { to: NoRuImg, title: 'RU' },
-    { to: '/de', title: 'DE' },
-] */
+import NoRuImg from './marka.jpg';
 
 const RuImg = () => {
     return (
+        <div>
+            <img src={NoRuImg} alt="RU" />
 
-        <div >
-            <p>rewterrz</p>
+            <div >
 
+                <p>rewterrz</p>
+
+            </div>
         </div>
-
     )
 }
 

@@ -14,10 +14,10 @@ const Items = [
     // { to: '/ru', title: 'RU' },
     // { to: '/ua', title: 'UA' },
 ]
-/* const Languages = [
-    { to: '../../img/', title: 'RU' },
-    { to: '/de', title: 'DE' },
-] */
+const Languages = [
+    { to: '/ru', title: 'RU' },
+    { to: '/', title: 'UA' },
+]
 
 
 
@@ -28,6 +28,17 @@ const Header = () => {
                 <nav className={style.nav}>
                     <ul>
                         {Items.map(item =>
+                            <li key={item.title}>
+                                <NavLink
+                                    className={({ isActive }) => isActive ? style.navActive : undefined}
+                                    to={item.to}>
+                                    {item.title}
+                                </NavLink>
+                            </li>)}
+                    </ul>
+
+                    <ul>
+                        {Languages.map(item =>
                             <li key={item.title}>
                                 <NavLink
                                     className={({ isActive }) => isActive ? style.navActive : undefined}
