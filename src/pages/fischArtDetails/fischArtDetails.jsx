@@ -20,7 +20,7 @@ const FischArtDetails = ({ tackleArr }) => {
     const FischTacklesArr = ThisFischTackles.split("/");
     const FischTacklesArrItem = FischTacklesArr[2];
 
-    console.log(ThisFischTackles)
+    console.log(FischTacklesArrItem)
 
     const AllTacklesForFisch = tackleArr.find(option => option.loc === FischTacklesArrItem);
 
@@ -50,10 +50,10 @@ const FischArtDetails = ({ tackleArr }) => {
     }
 
     const isInLokalStorage = savedTackle.map(item => item.id);
-
+    //  url(../images/karpfen.jpg)
     return (
         <div style={{
-            backgroundImage: "url(../images/carp.jpg)"
+            backgroundImage: `url (${'../images/' + FischTacklesArrItem + '.jpg'})`
         }} className={style.wrapp} >
 
             <BackLink link={LinkTo} />
