@@ -53,7 +53,7 @@ const FischArtDetails = ({ tackleArr }) => {
 
     return (
         <div style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL + '/images/carp.img'})`,
+            backgroundImage: "url(../images/carp.jpg)"
         }} className={style.wrapp} >
 
             <BackLink link={LinkTo} />
