@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/time2fishing/static/css/main.b2c051e6.css",
+    "main.css": "/time2fishing/static/css/main.fe614279.css",
     "main.js": "/time2fishing/static/js/main.77bb05d1.js",
     "static/css/8.bdc292fd.chunk.css": "/time2fishing/static/css/8.bdc292fd.chunk.css",
     "static/js/8.a307d97f.chunk.js": "/time2fishing/static/js/8.a307d97f.chunk.js",
@@ -9,7 +9,7 @@
     "static/media/fishing.jpg": "/time2fishing/static/media/fishing.3bb7c3e932620ccf647a.jpg",
     "static/media/marka.jpg": "/time2fishing/static/media/marka.2ea8efcbbea28078fe50.jpg",
     "index.html": "/time2fishing/index.html",
-    "main.b2c051e6.css.map": "/time2fishing/static/css/main.b2c051e6.css.map",
+    "main.fe614279.css.map": "/time2fishing/static/css/main.fe614279.css.map",
     "main.77bb05d1.js.map": "/time2fishing/static/js/main.77bb05d1.js.map",
     "8.bdc292fd.chunk.css.map": "/time2fishing/static/css/8.bdc292fd.chunk.css.map",
     "8.a307d97f.chunk.js.map": "/time2fishing/static/js/8.a307d97f.chunk.js.map",
@@ -17,7 +17,7 @@
     "0.80dd6de8.chunk.js.map": "/time2fishing/static/js/0.80dd6de8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2c051e6.css",
+    "static/css/main.fe614279.css",
     "static/js/main.77bb05d1.js"
   ]
 }
