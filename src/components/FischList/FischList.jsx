@@ -1,9 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
+import style from './FischList.module.css';
 
 const FischList = ({ sublink, tackleArr }) => {
     const location = useLocation();
     return (
-        <div>
+        <div className={style.wrap}>
             {tackleArr.length > 0 && (
                 <ul>
                     {tackleArr.map(fish => (

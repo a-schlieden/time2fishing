@@ -1,0 +1,25 @@
+.wrap{
+    background-image: url(../../img/fishing.jpg);
+    background-position: center center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.wrap ul{
+    padding: 50px;
+}
+
+.wrap ul li{
+    padding-bottom: 10px;
+}
+.wrap a{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.wrap a:hover{
+    color: #fff;
+}

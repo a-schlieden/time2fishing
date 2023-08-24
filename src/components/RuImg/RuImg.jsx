@@ -1,16 +1,12 @@
 
-import NoRuImg from './marka.jpg';
+import style from './RuImg.module.css';
+
+
 
 const RuImg = () => {
     return (
-        <div>
-            <img src={NoRuImg} alt="RU" />
+        <div className={style.RuWrap}>
 
-            <div >
-
-                <p>rewterrz</p>
-
-            </div>
         </div>
     )
 }

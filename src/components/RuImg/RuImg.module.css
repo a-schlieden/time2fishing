@@ -1,0 +1,7 @@
+.RuWrap{
+    background-image: url(../../img/marka.jpg);
+    background-position: center center;
+    background-size: contain;
+    width: 100%;
+    min-height: 100vh;
+}
