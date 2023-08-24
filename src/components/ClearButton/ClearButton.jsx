@@ -1,12 +1,11 @@
-const ClearButton = ({ reset }) => {
 
-    /*   const some = () => {
-          localStorage.removeItem(LOCAL_STORAGE_TACKLE);
-      } */
+import style from './ClearButton.module.css';
+
+const ClearButton = ({ reset }) => {
 
     return (
         <>
-            <button onClick={reset}>Clear</button>
+            <button className={style.clearBtn} onClick={reset}>Clear</button>
         </>
     );
 };

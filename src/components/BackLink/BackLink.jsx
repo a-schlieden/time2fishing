@@ -7,7 +7,7 @@ const BackLink = () => {
     return (
 
         <NavLink
-            className={style.linkWrap}
+            className={style.backLink}
             to={location}>
             GoBack
         </NavLink>

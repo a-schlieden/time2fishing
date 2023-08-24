@@ -1,9 +1,16 @@
-.linkWrap{
-    padding:2px;
-    margin-bottom: 10px;
+.backLink{
+    font-size: 20px;
+    padding: 7px 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     display: inline-block;
     text-decoration: none;
-    color: black;
-    border: 1px solid grey;
-    border-radius: 2px;
+    color: #114a11;
+    border: 2px solid #3bc13b;
+    background: azure;
+    border-radius: 10px;
+    }
+    
+    .backLink:hover{
+        cursor: pointer;
     }

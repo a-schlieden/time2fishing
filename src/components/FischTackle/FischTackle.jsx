@@ -1,39 +1,13 @@
 
-//import { useState, useEffect } from "react";
 import style from './FischTackle.module.css';
 
 const FichTackle = ({ tacklesArray, head, fnAddToLS, fnRemoveFromLS, isInLS }) => {
-    //const FichTackle = ({ tacklesArray, head, ls }) => {
-
-    //const [savedTackle, setSavedTackle] = useState(JSON.parse(window.localStorage.getItem(ls)) ?? []);
-
-    /*     useEffect(() => {
-            window.localStorage.setItem(ls, JSON.stringify(savedTackle));
-        }, [savedTackle, ls]); */
-
-
-    /*     const AddToLocalStorage = (item) => {
-            const newTackle = {
-                id: item.id,
-                name: item.name,
-            }
-            setSavedTackle((prevState) => [newTackle, ...prevState]);
-        } */
-
-    /*     const RemoveFromLocalStorage = (item) => {
-            setSavedTackle(savedTackle.filter((tak) => tak.id !== item.id));
-        } */
-
-    //  const isInLokalStorage = savedTackle.map(item => item.id);
-    // const isInLokalStorage = savedTaklesState.map(item => item.id);
 
     return (
         <>
-            <h2>{head}</h2>
-            <ul className={style.wrapp}>
+            <h1 className={style.head}>{head}</h1>
+            <ul className={style.fischTAckleList}>
                 {tacklesArray.map(tackle => (
-
-
                     <li key={tackle.id} >
                         <input type="checkbox"
                             id={tackle.id}

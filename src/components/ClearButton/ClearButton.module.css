@@ -1,0 +1,13 @@
+.clearBtn{
+    font-size: 20px;
+    color: #114a11;
+    padding: 7px 30px;
+    border-radius: 10px;
+    border: 2px solid #3bc13b;
+    background: azure;
+    margin-top: 45px;
+}
+
+.clearBtn:hover{
+    cursor: pointer;
+}

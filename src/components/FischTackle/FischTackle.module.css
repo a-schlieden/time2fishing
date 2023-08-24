@@ -1,0 +1,17 @@
+.head{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #6ebc34;
+}
+
+.fischTAckleList li{
+    font-size: 20px;
+    margin-bottom: 7px;
+    color:  #030c31;
+}
+
+.fischTAckleList li input{
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+}
