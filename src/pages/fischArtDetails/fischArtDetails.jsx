@@ -10,23 +10,21 @@ import ClearButton from "components/ClearButton/ClearButton";
 
 import style from './fischArtDetails.module.css';
 
+
 const FischArtDetails = ({ tackleArr }) => {
 
     const LOCAL_STORAGE_TACKLE = "tackles"
 
     const location = useLocation();
-    //[]
     const ThisFischTackles = location.pathname;
     const FischTacklesArr = ThisFischTackles.split("/");
     const FischTacklesArrItem = FischTacklesArr[2];
 
+    console.log(ThisFischTackles)
 
     const AllTacklesForFisch = tackleArr.find(option => option.loc === FischTacklesArrItem);
 
     const LinkTo = location.state;
-
-
-    //---------------------------------------------
 
     const [savedTackle, setSavedTackle] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_TACKLE)) ?? []);
 
@@ -54,7 +52,9 @@ const FischArtDetails = ({ tackleArr }) => {
     const isInLokalStorage = savedTackle.map(item => item.id);
 
     return (
-        <div className={style.wrapp}>
+        <div style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL + '/images/carp.img'})`,
+        }} className={style.wrapp} >
 
             <BackLink link={LinkTo} />
             <FischTackle
@@ -70,7 +70,7 @@ const FischArtDetails = ({ tackleArr }) => {
                 <Outlet />
             </Suspense>
 
-        </div>
+        </div >
     )
 }
 

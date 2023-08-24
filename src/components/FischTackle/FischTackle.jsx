@@ -1,6 +1,6 @@
 
 //import { useState, useEffect } from "react";
-
+import style from './FischTackle.module.css';
 
 const FichTackle = ({ tacklesArray, head, fnAddToLS, fnRemoveFromLS, isInLS }) => {
     //const FichTackle = ({ tacklesArray, head, ls }) => {
@@ -30,7 +30,7 @@ const FichTackle = ({ tacklesArray, head, fnAddToLS, fnRemoveFromLS, isInLS }) =
     return (
         <>
             <h2>{head}</h2>
-            <ul>
+            <ul className={style.wrapp}>
                 {tacklesArray.map(tackle => (
 
 
