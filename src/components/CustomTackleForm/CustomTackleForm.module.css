@@ -1,0 +1,21 @@
+.formInput{
+    width: 15%;
+    padding: 6px;
+    border-radius: 10px;
+    border: 2px solid #3bc13b;
+    font-size: 16px;
+}
+
+.formBtn{
+    font-size: 16px;
+    color: #114a11;
+    padding: 6px 16px;
+    border-radius: 10px;
+    border: 2px solid #3bc13b;
+    background: azure;
+    margin-left: 10px;
+}
+
+.formBtn:hover {
+cursor: pointer;
+}
