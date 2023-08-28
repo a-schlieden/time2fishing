@@ -1,23 +1,25 @@
 {
   "files": {
     "main.css": "/time2fishing/static/css/main.ea2ba617.css",
-    "main.js": "/time2fishing/static/js/main.119ab744.js",
-    "static/css/923.5a3c9f96.chunk.css": "/time2fishing/static/css/923.5a3c9f96.chunk.css",
-    "static/js/923.60d907a8.chunk.js": "/time2fishing/static/js/923.60d907a8.chunk.js",
+    "main.js": "/time2fishing/static/js/main.cab442f5.js",
+    "static/css/923.fff7f066.chunk.css": "/time2fishing/static/css/923.fff7f066.chunk.css",
+    "static/js/923.0387c3f0.chunk.js": "/time2fishing/static/js/923.0387c3f0.chunk.js",
     "static/css/0.d3af7225.chunk.css": "/time2fishing/static/css/0.d3af7225.chunk.css",
-    "static/js/0.80dd6de8.chunk.js": "/time2fishing/static/js/0.80dd6de8.chunk.js",
+    "static/js/0.676621a7.chunk.js": "/time2fishing/static/js/0.676621a7.chunk.js",
+    "static/js/690.7430394c.chunk.js": "/time2fishing/static/js/690.7430394c.chunk.js",
     "static/media/fishing.jpg": "/time2fishing/static/media/fishing.3bb7c3e932620ccf647a.jpg",
     "static/media/marka.jpg": "/time2fishing/static/media/marka.2ea8efcbbea28078fe50.jpg",
     "index.html": "/time2fishing/index.html",
     "main.ea2ba617.css.map": "/time2fishing/static/css/main.ea2ba617.css.map",
-    "main.119ab744.js.map": "/time2fishing/static/js/main.119ab744.js.map",
-    "923.5a3c9f96.chunk.css.map": "/time2fishing/static/css/923.5a3c9f96.chunk.css.map",
-    "923.60d907a8.chunk.js.map": "/time2fishing/static/js/923.60d907a8.chunk.js.map",
+    "main.cab442f5.js.map": "/time2fishing/static/js/main.cab442f5.js.map",
+    "923.fff7f066.chunk.css.map": "/time2fishing/static/css/923.fff7f066.chunk.css.map",
+    "923.0387c3f0.chunk.js.map": "/time2fishing/static/js/923.0387c3f0.chunk.js.map",
     "0.d3af7225.chunk.css.map": "/time2fishing/static/css/0.d3af7225.chunk.css.map",
-    "0.80dd6de8.chunk.js.map": "/time2fishing/static/js/0.80dd6de8.chunk.js.map"
+    "0.676621a7.chunk.js.map": "/time2fishing/static/js/0.676621a7.chunk.js.map",
+    "690.7430394c.chunk.js.map": "/time2fishing/static/js/690.7430394c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ea2ba617.css",
-    "static/js/main.119ab744.js"
+    "static/js/main.cab442f5.js"
   ]
 }
