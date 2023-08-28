@@ -1,5 +1,5 @@
 .weatherWrap{
-    background: rgb(20 70 10 / 20%);
+    background: rgba(20, 70, 10, 0.2);
     text-align: center;
     padding: 40px;
     color: #fff;
