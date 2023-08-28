@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Loader } from 'components/Loader/Loader';
 import FischTackle from "components/FischTackle/FischTackle";
+import CustomTackle from "components/CustomTackle/CustomTackle";
 import BackLink from "components/BackLink/BackLink";
 import ClearButton from "components/ClearButton/ClearButton";
 
@@ -62,6 +63,7 @@ const FischArtDetails = ({ tackleArr }) => {
                 fnRemoveFromLS={RemoveFromLocalStorage}
                 isInLS={isInLokalStorage}
             />
+            <CustomTackle />
             <ClearButton reset={() => clearBtn()} />
 
             <Suspense fallback={<Loader />}>
