@@ -4,6 +4,7 @@ import { lazy, Suspense } from 'react';
 import { Loader } from 'components/Loader/Loader';
 import Layout from 'components/Layout/Layout';
 import RuImg from 'components/RuImg/RuImg';
+import Impressum from 'components/Impressum/Impressum';
 
 import tackles from 'api/tackle.json';
 
@@ -19,6 +20,7 @@ export const App = () => {
           <Route path="ru" element={<RuImg />} />
           <Route path="fishes/:fishId" element={<FischArtDetails tackleArr={tackles} />}>
           </Route>
+          <Route path="impressum" element={<Impressum />} />
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>

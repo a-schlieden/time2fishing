@@ -4,7 +4,7 @@ import style from './FischList.module.css';
 const FischList = ({ sublink, tackleArr }) => {
     const location = useLocation();
     return (
-        <div className={style.wrap}>
+        <div className={style.flWrap}>
             {tackleArr.length > 0 && (
                 <ul>
                     {tackleArr.map(fish => (

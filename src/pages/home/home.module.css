@@ -1,0 +1,8 @@
+
+.homeWrapp{
+    background-image: url(../../../public/images/fishing.jpg);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 90vh;
+}
