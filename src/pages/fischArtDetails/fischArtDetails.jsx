@@ -20,8 +20,6 @@ const FischArtDetails = ({ tackleArr }) => {
     const FischTacklesArr = ThisFischTackles.split("/");
     const FischTacklesArrItem = FischTacklesArr[2];
 
-    console.log(FischTacklesArrItem)
-
     const AllTacklesForFisch = tackleArr.find(option => option.loc === FischTacklesArrItem);
 
     const LinkTo = location.state;
