@@ -1,13 +1,20 @@
 
+import { useState } from "react";
+
 import style from './CustomTackleForm.module.css';
 
-const CustomTackleForm = () => {
+const CustomTackleForm = ({ onSubmitForm }) => {
 
-    const handleSubmit = event => {
+    const [formInfo, setFormInfo] = useState('');
+
+    const onDataChange = (event) => {
+        setFormInfo(event.target.value);
+    }
+
+    const handleSubmit = (event) => {
         event.preventDefault();
-        const form = event.target;
-
-        form.reset();
+        onSubmitForm({ formInfo })
+        setFormInfo('');
     };
 
     return (
@@ -16,7 +23,9 @@ const CustomTackleForm = () => {
                 className={style.formInput}
                 type="text"
                 name="text"
+                value={formInfo}
                 placeholder="Enter task text..."
+                onChange={onDataChange}
             />
             <button className={style.formBtn} type="submit">Add task</button>
         </form>
