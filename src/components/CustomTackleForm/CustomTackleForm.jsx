@@ -18,16 +18,16 @@ const CustomTackleForm = ({ onSubmitForm }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={style.ctForm}>
             <input
-                className={style.formInput}
+                className={style.ctFormInput}
                 type="text"
                 name="text"
                 value={formInfo}
                 placeholder="Enter task text..."
                 onChange={onDataChange}
             />
-            <button className={style.formBtn} type="submit">Add task</button>
+            <button className={style.ctFormBtn} type="submit">Add task</button>
         </form>
     );
 };

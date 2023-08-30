@@ -1,7 +1,17 @@
+
+
+.ctList {
+    width: 35%;
+    background: rgb(21 76 10 / 40%);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
 .ctList li{
     font-size: 20px;
     margin-bottom: 7px;
-    color:  #030c31;
+    color:  #fff;
 }
 
 .ctList li input{
@@ -9,3 +19,17 @@
     width: 17px;
     height: 17px;
 }
+
+.ctListItemSpan{
+  display: inline-block;
+}
+.ctListItemSpan::first-letter{
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1200px) {
+    .ctList {
+      width: 96%;
+      background: rgb(21 76 10 / 20%);
+    }
+  }

@@ -1,4 +1,9 @@
-.formInput{
+
+.ctForm{
+    margin: 10px 0 20px 0;
+}
+
+.ctFormInput{
     width: 15%;
     padding: 6px;
     border-radius: 10px;
@@ -6,7 +11,7 @@
     font-size: 16px;
 }
 
-.formBtn{
+.ctFormBtn{
     font-size: 16px;
     color: #114a11;
     padding: 6px 16px;
@@ -16,6 +21,6 @@
     margin-left: 10px;
 }
 
-.formBtn:hover {
+.ctFormBtn:hover {
 cursor: pointer;
 }

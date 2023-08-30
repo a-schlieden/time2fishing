@@ -50,6 +50,7 @@ const FischArtDetails = ({ tackleArr }) => {
 
     const isInLokalStorage = savedTackle.map(item => item.id);
 
+
     return (
         <div style={{
             backgroundImage: `url(${'../images/' + FischTacklesArrItem + '.jpg'})`

@@ -1,39 +1,42 @@
 
 import style from './CustomTackleList.module.css';
 
-const CustomTackleList = () => {
+const CustomTackleList = ({ customTackles }) => {
 
-    /*     const handleSubmit = event => {
-            event.preventDefault();
-            const form = event.target;
-    
-            form.reset();
-        }; */
-
+    console.log("lng", customTackles.length === 0)
+    console.log("lng + text", customTackles)
     return (
-        <ul className={style.ctList}>
-            <li>
-                <input
-                    type="checkbox"
-                    id="13424"
-                    name="vehicle4"
-                /*  checked={false} */
-                /* onChange={ } */
-                />
-                <span>My Tackle 1</span>
-            </li>
-            <li>
-                <input
-                    type="checkbox"
-                    id="134243"
-                    name="vehicle4"
-                /*   checked={false} */
-                /*  onChange={ } */
-                />
-                <span>My Tackle 2</span>
-            </li>
-        </ul>
+        <>
+            {customTackles.length > 0 &&
+                (<ul className={style.ctList}>
+                    {customTackles.map(item => (
+                        <li key={item.id}>
+                            <input type="checkbox"
+                                id={item.id}
+                                name="vehicle4"
+                            />
+                            <span className={style.ctListItemSpan}>{item.text}</span>
+                        </li>
+                    ))}
+                </ul>)
+
+            }
+        </>
     );
 };
 
 export default CustomTackleList;
+
+
+/* <ul className={style.ctList}>
+<li>
+    <input
+        type="checkbox"
+        id="13424"
+        name="vehicle4"
+    /*  checked={false} 
+    /* onChange={ } 
+    />
+    <span>My Tackle 1</span>
+</li>
+</ul> */
