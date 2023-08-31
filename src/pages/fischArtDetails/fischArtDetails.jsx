@@ -1,8 +1,10 @@
 
 import { useState, useEffect } from "react";
-
 import { Suspense } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+
+import { nanoid } from "nanoid";
+
 import { Loader } from 'components/Loader/Loader';
 import FischTackle from "components/FischTackle/FischTackle";
 import CustomTackle from "components/CustomTackle/CustomTackle";
@@ -15,6 +17,7 @@ import style from './fischArtDetails.module.css';
 const FischArtDetails = ({ tackleArr }) => {
 
     const LOCAL_STORAGE_TACKLE = "tackles"
+    const LOCAL_STORAGE_CUSTOM_TACKLE = "custom_tackles";
 
     const location = useLocation();
     const ThisFischTackles = location.pathname;
@@ -26,10 +29,15 @@ const FischArtDetails = ({ tackleArr }) => {
     const LinkTo = location.state;
 
     const [savedTackle, setSavedTackle] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_TACKLE)) ?? []);
+    const [customTackle, setCustomTackle] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_CUSTOM_TACKLE)) ?? []);
 
     useEffect(() => {
         window.localStorage.setItem(LOCAL_STORAGE_TACKLE, JSON.stringify(savedTackle));
     }, [savedTackle, LOCAL_STORAGE_TACKLE]);
+
+    useEffect(() => {
+        window.localStorage.setItem(LOCAL_STORAGE_CUSTOM_TACKLE, JSON.stringify(customTackle));
+    }, [customTackle, LOCAL_STORAGE_CUSTOM_TACKLE]);
 
 
     const AddToLocalStorage = (item) => {
@@ -46,9 +54,23 @@ const FischArtDetails = ({ tackleArr }) => {
 
     const clearBtn = () => {
         setSavedTackle([])
+        setCustomTackle([])
     }
 
     const isInLokalStorage = savedTackle.map(item => item.id);
+
+    //-------------------------------------------------------------------------------
+
+
+    const onNewCustomTackleAdd = (infoFromForm) => {
+        const newCustomTackle = {
+            id: nanoid(),
+            text: infoFromForm.formInfo,
+            chk: true
+        }
+        setCustomTackle((prevState) => [newCustomTackle, ...prevState]);
+    }
+
 
 
     return (
@@ -64,7 +86,10 @@ const FischArtDetails = ({ tackleArr }) => {
                 fnRemoveFromLS={RemoveFromLocalStorage}
                 isInLS={isInLokalStorage}
             />
-            <CustomTackle />
+            <CustomTackle
+                newCustomTackleAdd={onNewCustomTackleAdd}
+                allcustomTackles={customTackle}
+            />
             <ClearButton reset={() => clearBtn()} />
 
             <Suspense fallback={<Loader />}>
