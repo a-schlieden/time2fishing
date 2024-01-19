@@ -8,3 +8,9 @@
     display: flex;
     justify-content: flex-end;
 }
+.weatherWeekItemItem{
+    color: red;
+}
+.weatherWeekItemList{
+    padding: 1px;
+}
