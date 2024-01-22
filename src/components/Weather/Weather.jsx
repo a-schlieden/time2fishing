@@ -6,10 +6,10 @@ import style from './Weather.module.css';
 
 
 
-const URL = 'https://api.openweathermap.org/data/2.5';
+const URL = 'https://api.openweathermap.org/data/2.5/weather/';
 const ICONURL = 'https://openweathermap.org/img/wn/';
 const KEY = 'd166a591b291530de4f15fa7d5685607';
-
+const CityID = 6548737;
 
 const Weather = () => {
 
@@ -25,8 +25,8 @@ const Weather = () => {
                 setLong(position.coords.longitude);
             });
 
-            await fetch(`${URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${KEY}`)
-                /*  await fetch(`${URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${KEY}`) */
+            /* await fetch(`${URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${KEY}`) */
+            await fetch(`${URL}?id=${CityID}&units=metric&APPID=${KEY}`)
                 .then(res => res.json())
                 .then(result => {
                     setData(result)

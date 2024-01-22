@@ -14,23 +14,21 @@ const KEY = 'd166a591b291530de4f15fa7d5685607';
 const WeatherWeek = () => {
 
     /*   const [lat, setLat] = useState(55.3144537);
-      const [long, setLong] = useState(12.2908344); */
+    const [long, setLong] = useState(12.2908344); */
     const CityID = 6548737;
-    //const NumberOfDays = 8;
     const [weatherData, setData] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
-            await fetch(`${URL}?id=${CityID}&appid=${KEY}&units=metric`)
+            await fetch(`${URL}?id=${CityID}&lang=ua&appid=${KEY}&units=metric`)
                 .then(res => res.json())
                 .then(result => {
                     setData(result)
-                    //console.log(result);
+                    //console.log("Weekly result", result);
                 });
         }
         fetchData();
     }, [])
-
 
     return (
         <div className={style.weatherWrap}>
