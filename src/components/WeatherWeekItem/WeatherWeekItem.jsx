@@ -9,6 +9,7 @@ const WeatherWeekItem = ({ weatherArray }) => {
     const ThisDate = moment().format().substring(0, 10);
     const noTodayArr = weatherArray.filter(value => value.dt_txt.substring(0, 10) !== ThisDate).filter(value => value.dt_txt.substring(11, 13) === "12");
 
+    //console.log("original Arr ", weatherArray)
     //console.log("original Arr ", noTodayArr)
 
     /*     let dd = new Date(ThisDate);
@@ -51,18 +52,17 @@ const WeatherWeekItem = ({ weatherArray }) => {
 
     return (
         <>
-            <h3 className={style.weatherWeekItemItem}>There is Week list with weather for every day</h3>
             <ul className={style.weatherWeekItemList}>
                 {noTodayArr.map(item => (
                     <li key={item.dt} >
                         <p>{DayDate(item.dt_txt.substring(0, 10))} {item.dt_txt.substring(0, 10)}</p>
-                        {/*  <span>{item.dt_txt.substring(0, 10)}</span> */}
                         <p>Temprature: {item.main.temp} &deg;C</p>
                         <p>Humidity: {item.main.humidity} %</p>
                         <div className={style.weatherDescriptionWrap}>
                             <p>{item.weather[0].description}</p>
                             <img src={ICONURL + item.weather[0].icon + ".png"} alt="icon" />
                         </div>
+                        <p>Wind: {item.wind.speed} m/s</p>
                     </li>
 
                 ))}

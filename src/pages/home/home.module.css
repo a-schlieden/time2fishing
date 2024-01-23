@@ -9,3 +9,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.homeWeatherWrapp{
+    width: 50%;
+}

@@ -10,7 +10,7 @@ const Home = ({ tackleArr }) => {
     return (
         <div className={style.homeWrapp}>
             <FischList sublink={'fishes/'} tackleArr={tackleArray} />
-            <div>
+            <div className={style.homeWeatherWrapp}>
                 <Weather />
                 <WeatherWeek />
             </div>

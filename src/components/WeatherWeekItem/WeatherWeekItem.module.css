@@ -12,5 +12,6 @@
     color: red;
 }
 .weatherWeekItemList{
-    padding: 1px;
+    display: flex;
+    padding-left: 0;
 }

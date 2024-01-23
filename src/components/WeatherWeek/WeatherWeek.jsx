@@ -35,8 +35,7 @@ const WeatherWeek = () => {
 
             {(typeof weatherData.city != 'undefined') ? (
                 <>
-                    <h3>Weather Week in </h3>
-                    <h3>{weatherData.city.name}</h3>
+                    <h3>Weather Week in {weatherData.city.name}</h3>
                     <WeatherWeekItem weatherArray={weatherData.list} />
                 </>
             ) : (
