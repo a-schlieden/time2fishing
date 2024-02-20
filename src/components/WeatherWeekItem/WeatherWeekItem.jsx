@@ -55,7 +55,8 @@ const WeatherWeekItem = ({ weatherArray }) => {
             <ul className={style.weatherWeekItemList}>
                 {noTodayArr.map(item => (
                     <li key={item.dt} >
-                        <p>{DayDate(item.dt_txt.substring(0, 10))} {item.dt_txt.substring(0, 10)}</p>
+                        <h3>{DayDate(item.dt_txt.substring(0, 10))}</h3>
+                        <p>{item.dt_txt.substring(0, 10)}</p>
                         <p>Temprature: {item.main.temp} &deg;C</p>
                         <p>Humidity: {item.main.humidity} %</p>
                         <div className={style.weatherDescriptionWrap}>

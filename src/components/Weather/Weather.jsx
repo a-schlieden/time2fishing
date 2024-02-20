@@ -39,17 +39,17 @@ const Weather = () => {
 
 
     return (
-        <div className={style.weatherWrap}>
+        <div className={style.weatherTodayWrap}>
 
             {(typeof weatherData.main != 'undefined') ? (
                 <>
-                    <h3>Weather in {weatherData.name} today</h3>
+                    <h3 className={style.weatherTodayHead}>Weather in {weatherData.name} today</h3>
                     <p>{moment().format('dddd')} {moment().subtract(10, 'days').calendar()}</p>
                     {/* <p>Date: {moment().format('LL')}</p> */}
                     <p>Temprature: {weatherData.main.temp} &deg;C</p>
                     <p>Sunrise: {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString('en-IN')}</p>
                     <p>Sunset: {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString('en-IN')}</p>
-                    <div className={style.weatherDescriptionWrap}>
+                    <div className={style.weatherTodayDescriptionWrap}>
                         <p>{weatherData.weather[0].main}</p>
                         <img src={ICONURL + weatherData.weather[0].icon + ".png"} alt="icon" />
                     </div>

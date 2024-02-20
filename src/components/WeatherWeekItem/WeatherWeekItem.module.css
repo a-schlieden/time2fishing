@@ -1,17 +1,26 @@
 .weatherWrap{
-    background: rgba(20, 70, 10, 0.2);
     text-align: center;
     padding: 40px;
     color: #fff;
 }
 .weatherDescriptionWrap{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
-.weatherWeekItemItem{
-    color: red;
+
+.weatherDescriptionWrap p{
+    margin-top: 0;
+    margin-bottom: 0;
 }
+
+.weatherDescriptionWrap img{
+    width: 30px;
+    height: 30px;
+}
+
 .weatherWeekItemList{
     display: flex;
     padding-left: 0;
+    justify-content: space-between;
 }

@@ -1,10 +1,27 @@
-.weatherWrap{
-    background: rgba(20, 70, 10, 0.2);
+.weatherTodayWrap{
+    background: rgba(20, 70, 10, 0.4); 
     text-align: center;
     padding: 40px;
     color: #fff;
 }
-.weatherDescriptionWrap{
+.weatherTodayDescriptionWrap{
     display: flex;
     justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
+
+.weatherTodayDescriptionWrap p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.weatherTodayDescriptionWrap img{
+    width: 40px;
+    height: 40px;
+}
+
+.weatherTodayHead{
+    text-transform: uppercase;
+}
+
