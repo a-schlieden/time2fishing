@@ -23,4 +23,5 @@
     display: flex;
     padding-left: 0;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
