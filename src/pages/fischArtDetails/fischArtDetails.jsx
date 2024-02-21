@@ -17,7 +17,6 @@ import style from './fischArtDetails.module.css';
 const FischArtDetails = ({ tackleArr }) => {
 
     const LOCAL_STORAGE_TACKLE = "tackles"
-    const LOCAL_STORAGE_CUSTOM_TACKLE = "custom_tackles";
 
     const location = useLocation();
     const ThisFischTackles = location.pathname;
@@ -29,16 +28,10 @@ const FischArtDetails = ({ tackleArr }) => {
     const LinkTo = location.state;
 
     const [savedTackle, setSavedTackle] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_TACKLE)) ?? []);
-    const [customTackle, setCustomTackle] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_CUSTOM_TACKLE)) ?? []);
 
     useEffect(() => {
         window.localStorage.setItem(LOCAL_STORAGE_TACKLE, JSON.stringify(savedTackle));
     }, [savedTackle, LOCAL_STORAGE_TACKLE]);
-
-    useEffect(() => {
-        window.localStorage.setItem(LOCAL_STORAGE_CUSTOM_TACKLE, JSON.stringify(customTackle));
-    }, [customTackle, LOCAL_STORAGE_CUSTOM_TACKLE]);
-
 
     const AddToLocalStorage = (item) => {
         const newTackle = {
@@ -59,19 +52,27 @@ const FischArtDetails = ({ tackleArr }) => {
 
     const isInLokalStorage = savedTackle.map(item => item.id);
 
-    //-------------------------------------------------------------------------------
+    //------------------- CustomTackle -------------------------
+
+    const LOCAL_STORAGE_CUSTOM_TACKLE = "custom_tackles";
+
+    const [customTackle, setCustomTackle] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_CUSTOM_TACKLE)) ?? []);
+
+    useEffect(() => {
+        window.localStorage.setItem(LOCAL_STORAGE_CUSTOM_TACKLE, JSON.stringify(customTackle));
+    }, [customTackle, LOCAL_STORAGE_CUSTOM_TACKLE]);
 
 
-    const onNewCustomTackleAdd = (infoFromForm) => {
+    const addNewCustomTackleToLocalStorage = (infoFromForm) => {
         const newCustomTackle = {
             id: nanoid(),
             text: infoFromForm.formInfo,
-            /* chk: true, */
+            isChecked: true,
         }
         setCustomTackle((prevState) => [newCustomTackle, ...prevState]);
     }
 
-
+    const isCustomTackleInLS = customTackle.map(item => item.id);
 
     return (
         <div style={{
@@ -87,8 +88,9 @@ const FischArtDetails = ({ tackleArr }) => {
                 isInLS={isInLokalStorage}
             />
             <CustomTackle
-                newCustomTackleAdd={onNewCustomTackleAdd}
+                newCustomTackleAdd={addNewCustomTackleToLocalStorage}
                 allcustomTackles={customTackle}
+                isCTinLS={isCustomTackleInLS}
             />
             <ClearButton reset={() => clearBtn()} />
 

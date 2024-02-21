@@ -3,16 +3,16 @@ import { useState, useEffect } from "react";
 
 import style from './CustomTackleList.module.css';
 
-const CustomTackleList = ({ customTackles }) => {
+const CustomTackleList = ({ customTackles, isCustomTackleinLS }) => {
 
 
     const [customTackleCheck, setCustomTackleCheck] = useState(false);
 
     useEffect(() => {
-        console.log("Test !!! " + customTackleCheck)
+        /*  console.log("Test !!! " + customTackleCheck) */
     }, [customTackleCheck]);
 
-
+    console.log(isCustomTackleinLS)
 
     return (
         <>
