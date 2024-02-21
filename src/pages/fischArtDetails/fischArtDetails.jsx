@@ -66,7 +66,7 @@ const FischArtDetails = ({ tackleArr }) => {
         const newCustomTackle = {
             id: nanoid(),
             text: infoFromForm.formInfo,
-            chk: true
+            /* chk: true, */
         }
         setCustomTackle((prevState) => [newCustomTackle, ...prevState]);
     }

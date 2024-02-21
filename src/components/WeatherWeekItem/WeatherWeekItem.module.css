@@ -25,3 +25,16 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+@media (max-width: 663px) {
+    .weatherWeekItemList li{
+        width: 49%;
+    }
+}
+
+@media (max-width: 500px) {
+    .weatherWeekItemList li{
+        width: 99%;
+    }
+}
+

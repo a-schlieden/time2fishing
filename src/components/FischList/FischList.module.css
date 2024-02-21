@@ -17,6 +17,7 @@
 .flWrap ul li {
   padding-bottom: 10px;
 }
+
 .flWrap a {
   font-size: 20px;
   font-weight: bold;
@@ -25,6 +26,13 @@
   text-transform: uppercase;
   padding-bottom: 10px;
 }
+
 .flWrap a:hover {
   color: #fff;
+}
+
+@media (max-width: 663px) {
+  .flWrap{
+    width: 99%;
+  }
 }

@@ -1,10 +1,19 @@
 
+import { useState, useEffect } from "react";
+
 import style from './CustomTackleList.module.css';
 
 const CustomTackleList = ({ customTackles }) => {
 
-    console.log("lng", customTackles.length === 0)
-    console.log("lng + text", customTackles)
+
+    const [customTackleCheck, setCustomTackleCheck] = useState(false);
+
+    useEffect(() => {
+        console.log("Test !!! " + customTackleCheck)
+    }, [customTackleCheck]);
+
+
+
     return (
         <>
             {customTackles.length > 0 &&
@@ -12,8 +21,11 @@ const CustomTackleList = ({ customTackles }) => {
                     {customTackles.map(item => (
                         <li key={item.id}>
                             <input type="checkbox"
+                                readOnly
                                 id={item.id}
                                 name="vehicle4"
+                                checked={customTackleCheck}
+                                onChange={() => setCustomTackleCheck(!customTackleCheck)}
                             />
                             <span className={style.ctListItemSpan}>{item.text}</span>
                         </li>
