@@ -1,19 +1,8 @@
 
-import { useState, useEffect } from "react";
-
 import style from './CustomTackleList.module.css';
 
-const CustomTackleList = ({ customTackles, isCustomTackleinLS }) => {
-
-
-    const [customTackleCheck, setCustomTackleCheck] = useState(false);
-
-    useEffect(() => {
-        /*  console.log("Test !!! " + customTackleCheck) */
-    }, [customTackleCheck]);
-
-    console.log(isCustomTackleinLS)
-
+const CustomTackleList = ({ customTackles, onDeleteOneCustomTackle }) => {
+    /* checkBoxStateChange, checkBoxState, */
     return (
         <>
             {customTackles.length > 0 &&
@@ -24,14 +13,20 @@ const CustomTackleList = ({ customTackles, isCustomTackleinLS }) => {
                                 readOnly
                                 id={item.id}
                                 name="vehicle4"
-                                checked={customTackleCheck}
-                                onChange={() => setCustomTackleCheck(!customTackleCheck)}
+                            /* checked={customTackleCheck}
+                            onChange={() => setCustomTackleCheck(!customTackleCheck)} */
+                            /* checked={checkBoxState}
+                            onChange={checkBoxStateChange} */
                             />
                             <span className={style.ctListItemSpan}>{item.text}</span>
+                            <button
+                                onClick={() => onDeleteOneCustomTackle(item.id)}
+                                className={style.ctListItemBtn}>
+                                Delete
+                            </button>
                         </li>
                     ))}
                 </ul>)
-
             }
         </>
     );

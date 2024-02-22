@@ -57,6 +57,7 @@ const FischArtDetails = ({ tackleArr }) => {
     const LOCAL_STORAGE_CUSTOM_TACKLE = "custom_tackles";
 
     const [customTackle, setCustomTackle] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_CUSTOM_TACKLE)) ?? []);
+    /* const [customTackleCheck, setCustomTackleCheck] = useState(false); */
 
     useEffect(() => {
         window.localStorage.setItem(LOCAL_STORAGE_CUSTOM_TACKLE, JSON.stringify(customTackle));
@@ -67,12 +68,20 @@ const FischArtDetails = ({ tackleArr }) => {
         const newCustomTackle = {
             id: nanoid(),
             text: infoFromForm.formInfo,
-            isChecked: true,
+            /* isChecked: customTackleCheck, */
         }
         setCustomTackle((prevState) => [newCustomTackle, ...prevState]);
     }
 
-    const isCustomTackleInLS = customTackle.map(item => item.id);
+    /* const ctCheck = () => {
+        setCustomTackleCheck(!customTackleCheck)
+        console.log(customTackleCheck) 
+    } */
+    /*  console.log("Check ? ", customTackleCheck) */
+
+    const deleteOneCustomTackle = (customTackleId) => {
+        setCustomTackle(customTackle.filter((contact) => contact.id !== customTackleId))
+    }
 
     return (
         <div style={{
@@ -90,7 +99,7 @@ const FischArtDetails = ({ tackleArr }) => {
             <CustomTackle
                 newCustomTackleAdd={addNewCustomTackleToLocalStorage}
                 allcustomTackles={customTackle}
-                isCTinLS={isCustomTackleInLS}
+                fnDeleteOneCustomTackle={deleteOneCustomTackle}
             />
             <ClearButton reset={() => clearBtn()} />
 
@@ -103,3 +112,6 @@ const FischArtDetails = ({ tackleArr }) => {
 }
 
 export default FischArtDetails;
+
+/* checkBoxState={customTackleCheck}
+checkBoxStateChange={ctCheck} */
