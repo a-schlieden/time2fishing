@@ -11,7 +11,7 @@ const WeatherWeekItem = ({ weatherArray }) => {
 
     //console.log("original Arr ", weatherArray)
     //console.log("original Arr ", noTodayArr)
-
+    console.log(ThisDate)
     /*     let dd = new Date(ThisDate);
         console.log(dd)
         console.log(dd.getDay()); */
