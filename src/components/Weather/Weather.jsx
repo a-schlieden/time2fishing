@@ -15,7 +15,6 @@ const Weather = () => {
 
     const [lat, setLat] = useState(51.3144537);
     const [long, setLong] = useState(12.2908344);
-    /* const [city, setCity] = useState("Leipzig.de"); */
     const [weatherData, setData] = useState([]);
 
     useEffect(() => {
@@ -25,12 +24,11 @@ const Weather = () => {
                 setLong(position.coords.longitude);
             });
 
-            /* await fetch(`${URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${KEY}`) */
             await fetch(`${URL}?id=${CityID}&units=metric&APPID=${KEY}`)
                 .then(res => res.json())
                 .then(result => {
                     setData(result)
-                    //console.log(result);
+                    console.log("result", result)
                 });
         }
         fetchData();
@@ -54,6 +52,7 @@ const Weather = () => {
                         <img src={ICONURL + weatherData.weather[0].icon + ".png"} alt="icon" />
                     </div>
                     <p>Humidity: {weatherData.main.humidity} %</p>
+                    <p>Wind: {weatherData.wind.speed} m/s</p>
 
                 </>
             ) : (

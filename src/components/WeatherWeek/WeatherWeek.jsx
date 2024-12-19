@@ -24,7 +24,7 @@ const WeatherWeek = () => {
                 .then(res => res.json())
                 .then(result => {
                     setData(result)
-                    //console.log("Weekly result", result);
+                    console.log("Weekly result", result);
                 });
         }
         fetchData();
