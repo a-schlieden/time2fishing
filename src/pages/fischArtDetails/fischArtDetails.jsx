@@ -16,8 +16,6 @@ import style from './fischArtDetails.module.css';
 
 const FischArtDetails = ({ tackleArr }) => {
 
-    const LOCAL_STORAGE_TACKLE = "tackles"
-
     const location = useLocation();
     const ThisFischTackles = location.pathname;
     const FischTacklesArr = ThisFischTackles.split("/");
@@ -26,6 +24,10 @@ const FischArtDetails = ({ tackleArr }) => {
     const AllTacklesForFisch = tackleArr.find(option => option.loc === FischTacklesArrItem);
 
     const LinkTo = location.state;
+
+    //------------------- Tackles -------------------------
+
+    const LOCAL_STORAGE_TACKLE = "tackles"
 
     const [savedTackle, setSavedTackle] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_TACKLE)) ?? []);
 
@@ -45,42 +47,58 @@ const FischArtDetails = ({ tackleArr }) => {
         setSavedTackle(savedTackle.filter((tak) => tak.id !== item.id));
     }
 
-    const clearBtn = () => {
-        setSavedTackle([])
-        setCustomTackle([])
+    const isInLokalStorage = savedTackle.map(item => item.id);
+
+    //------------------- Check  CustomTackle -------------------------
+
+    const LOCAL_STORAGE_CUSTOM_TACKLE_CHECKED = "custom_tackles_checkced";
+
+    const [customTackleCheck, setCustomTackleCheck] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_CUSTOM_TACKLE_CHECKED)) ?? []);
+
+    useEffect(() => {
+        window.localStorage.setItem(LOCAL_STORAGE_CUSTOM_TACKLE_CHECKED, JSON.stringify(customTackleCheck));
+    }, [customTackleCheck, LOCAL_STORAGE_CUSTOM_TACKLE_CHECKED]);
+
+    const AddToLsChecedItem = (item) => {
+        const customTackleCheckItem = {
+            id: item,
+        }
+        setCustomTackleCheck((prevState) => [customTackleCheckItem, ...prevState]);
     }
 
-    const isInLokalStorage = savedTackle.map(item => item.id);
+    const RemoveFromLsChecedItem = (checkeditem) => {
+        setCustomTackleCheck(customTackleCheck.filter((customtack) => customtack.id !== checkeditem));
+    }
+
+    const isCustomTackleCheckInLokalStorage = customTackleCheck.map(item => item.id);
 
     //------------------- CustomTackle -------------------------
 
     const LOCAL_STORAGE_CUSTOM_TACKLE = "custom_tackles";
 
     const [customTackle, setCustomTackle] = useState(JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_CUSTOM_TACKLE)) ?? []);
-    /* const [customTackleCheck, setCustomTackleCheck] = useState(false); */
 
     useEffect(() => {
         window.localStorage.setItem(LOCAL_STORAGE_CUSTOM_TACKLE, JSON.stringify(customTackle));
     }, [customTackle, LOCAL_STORAGE_CUSTOM_TACKLE]);
 
-
     const addNewCustomTackleToLocalStorage = (infoFromForm) => {
         const newCustomTackle = {
             id: nanoid(),
             text: infoFromForm.formInfo,
-            /* isChecked: customTackleCheck, */
         }
         setCustomTackle((prevState) => [newCustomTackle, ...prevState]);
     }
 
-    /* const ctCheck = () => {
-        setCustomTackleCheck(!customTackleCheck)
-        console.log(customTackleCheck) 
-    } */
-    /*  console.log("Check ? ", customTackleCheck) */
-
     const deleteOneCustomTackle = (customTackleId) => {
-        setCustomTackle(customTackle.filter((contact) => contact.id !== customTackleId))
+        setCustomTackle(customTackle.filter((customTackle) => customTackle.id !== customTackleId))
+        setCustomTackleCheck(customTackleCheck.filter((customtack) => customtack.id !== customTackleId));
+    }
+
+    const clearBtn = () => {
+        setSavedTackle([])
+        setCustomTackle([])
+        setCustomTackleCheck([])
     }
 
     return (
@@ -100,6 +118,9 @@ const FischArtDetails = ({ tackleArr }) => {
                 newCustomTackleAdd={addNewCustomTackleToLocalStorage}
                 allcustomTackles={customTackle}
                 fnDeleteOneCustomTackle={deleteOneCustomTackle}
+                fnAddToLsChecedItem={AddToLsChecedItem}
+                fnRemoveFromLsChecedItem={RemoveFromLsChecedItem}
+                fnCheckLsCheckedItem={isCustomTackleCheckInLokalStorage}
             />
             <ClearButton reset={() => clearBtn()} />
 

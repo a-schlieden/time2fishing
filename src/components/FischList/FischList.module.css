@@ -16,6 +16,7 @@
 
 .flWrap ul li {
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .flWrap a {
@@ -25,10 +26,12 @@
   color: #178077;
   text-transform: uppercase;
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .flWrap a:hover {
   color: #fff;
+  background: #178077;
 }
 
 @media (max-width: 663px) {

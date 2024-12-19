@@ -1,8 +1,13 @@
 
 import style from './CustomTackleList.module.css';
 
-const CustomTackleList = ({ customTackles, onDeleteOneCustomTackle }) => {
-    /* checkBoxStateChange, checkBoxState, */
+const CustomTackleList = (
+    { customTackles,
+        onDeleteOneCustomTackle,
+        fnAddToLsChecedItem,
+        fnRemoveFromLsChecedItem,
+        fnCheckLsCheckedItem }
+) => {
     return (
         <>
             {customTackles.length > 0 &&
@@ -13,16 +18,18 @@ const CustomTackleList = ({ customTackles, onDeleteOneCustomTackle }) => {
                                 readOnly
                                 id={item.id}
                                 name="vehicle4"
-                            /* checked={customTackleCheck}
-                            onChange={() => setCustomTackleCheck(!customTackleCheck)} */
-                            /* checked={checkBoxState}
-                            onChange={checkBoxStateChange} */
+                                checked={fnCheckLsCheckedItem.some(value => value === item.id)}
+                                onChange={
+                                    fnCheckLsCheckedItem.some(value => value === item.id)
+                                        ? () => fnRemoveFromLsChecedItem(item.id)
+                                        : () => fnAddToLsChecedItem(item.id)
+                                }
                             />
                             <span className={style.ctListItemSpan}>{item.text}</span>
                             <button
                                 onClick={() => onDeleteOneCustomTackle(item.id)}
                                 className={style.ctListItemBtn}>
-                                Delete
+                                Delete Task
                             </button>
                         </li>
                     ))}
@@ -33,17 +40,3 @@ const CustomTackleList = ({ customTackles, onDeleteOneCustomTackle }) => {
 };
 
 export default CustomTackleList;
-
-
-/* <ul className={style.ctList}>
-<li>
-    <input
-        type="checkbox"
-        id="13424"
-        name="vehicle4"
-    /*  checked={false} 
-    /* onChange={ } 
-    />
-    <span>My Tackle 1</span>
-</li>
-</ul> */
