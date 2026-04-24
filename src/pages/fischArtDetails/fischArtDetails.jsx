@@ -15,7 +15,6 @@ import style from './fischArtDetails.module.css';
 
 
 const FischArtDetails = ({ tackleArr }) => {
-
     const location = useLocation();
     const ThisFischTackles = location.pathname;
     const FischTacklesArr = ThisFischTackles.split("/");

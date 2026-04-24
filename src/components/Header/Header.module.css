@@ -28,9 +28,16 @@
     height: 100%;
 }
 .navActive{
-  color: rgb(26, 230, 219);
+    color: #b91010;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.nav li:hover{
-    /* color: rgb(187, 22, 22); */
+.languageLink{
+    color: #b91010; 
+    font-weight: bold; 
+}
+
+.languageLink:hover{
+    text-decoration: underline;
 }
