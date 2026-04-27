@@ -13,8 +13,6 @@ const ICON = 'https://openweathermap.org/img/w'; */
         : Promise.reject(new Error('Not found'));
 } */
 
-
-
 /* export function fetchTrendingMovies() {
     return fetchWithErrorHandling(`${URL}trending/movie/week?api_key=${KEY}`);
 }
@@ -36,3 +34,17 @@ export function fetchCastMovie(FilmId) {
 export function fetchReviewMovie(FilmId) {
     return fetchWithErrorHandling(`${URL}movie/${FilmId}/reviews?api_key=${KEY}&language=en-US`);
 } */
+
+
+const FISCH_TACKLE_URL = 'https://689b3be9e727e9657f644977.mockapi.io/fishTackle/';
+
+async function fishTackleFetch(url = '') {
+    const response = await fetch(url);
+    return response.ok
+        ? await response.json()
+        : Promise.reject(new Error('Not found'));
+}
+
+export function fetchTackless() {
+    return fishTackleFetch(`${FISCH_TACKLE_URL}`);
+}

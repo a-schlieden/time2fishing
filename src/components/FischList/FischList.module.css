@@ -1,10 +1,4 @@
-/* .wrap {
-  background-image: url(../../../public/images/fishing.jpg);
-  background-position: center center;
-  background-size: cover;
-  width: 100%;
-  min-height: 90vh;
-} */
+
 .flWrap{
   min-height: 60vh;
   width: 45%;
@@ -17,21 +11,25 @@
 .flWrap ul li {
   padding-bottom: 10px;
   padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 .flWrap a {
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  color: #178077;
+  color: #fff;
   text-transform: uppercase;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  background: #178077;
+  padding: 11px;
+  border-radius: 5px;
 }
 
 .flWrap a:hover {
-  color: #fff;
-  background: #178077;
+  color: #178077;
+  background: #fff;
+  padding: 11px;
+  border-radius: 5px;
 }
 
 @media (max-width: 663px) {
