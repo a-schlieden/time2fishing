@@ -38,6 +38,7 @@ export function fetchReviewMovie(FilmId) {
 
 const FISCH_TACKLE_URL = 'https://689b3be9e727e9657f644977.mockapi.io/fishTackle/';
 
+
 async function fishTackleFetch(url = '') {
     const response = await fetch(url);
     return response.ok
@@ -45,6 +46,6 @@ async function fishTackleFetch(url = '') {
         : Promise.reject(new Error('Not found'));
 }
 
-export function fetchTackles() {
+export function fetchAllTacklesAndFishes() {
     return fishTackleFetch(`${FISCH_TACKLE_URL}`);
 }

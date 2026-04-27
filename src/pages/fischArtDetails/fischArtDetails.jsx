@@ -13,38 +13,17 @@ import ClearButton from "components/ClearButton/ClearButton";
 
 import style from './fischArtDetails.module.css';
 
-import { fetchTackles } from '../../api/Fetch';
-
-const FischArtDetails = ({ tackleArr }) => {
+const FischArtDetails = ({ tacklesArr }) => {
     const location = useLocation();
     const ThisFischTackles = location.pathname;
     const FischTacklesArr = ThisFischTackles.split("/");
     const FischTacklesArrItem = FischTacklesArr[2];
 
-    const AllTacklesForFisch = tackleArr.find(option => option.loc === FischTacklesArrItem);
-
-
-    //console.log("tackleArr local", tackleArr)
-    console.log("AllTacklesForFisch local", AllTacklesForFisch)
-
     const LinkTo = location.state;
 
-    //------------------- Tackles from DB -------------------------
+    //------------------- Tackles from DB -----------------
 
-    const [tacklesDB, setTacklesDB] = useState([]);
-
-    useEffect(() => {
-        fetchTackles().then(result => {
-            setTacklesDB(result);
-        });
-    },
-        []);
-
-    const AllTacklesForFischDb = tacklesDB.find(option => option.fish_name_en === FischTacklesArrItem);
-
-    //console.log("tackles DB", tacklesDB)
-    console.log("AllTacklesForFischDb DB", AllTacklesForFischDb)
-
+    const AllTacklesForFisch = tacklesArr.find(option => option.fish_name_en === FischTacklesArrItem);
 
     //------------------- Tackles -------------------------
 
@@ -129,8 +108,8 @@ const FischArtDetails = ({ tackleArr }) => {
 
             <BackLink link={LinkTo} />
             <FischTackle
-                tacklesArray={AllTacklesForFisch.tackle}
-                head={AllTacklesForFisch.name}
+                tacklesArray={AllTacklesForFisch?.tackle}
+                head={AllTacklesForFisch?.fish_name_ua}
                 fnAddToLS={AddToLocalStorage}
                 fnRemoveFromLS={RemoveFromLocalStorage}
                 isInLS={isInLokalStorage}
@@ -157,3 +136,7 @@ export default FischArtDetails;
 
 /* checkBoxState={customTackleCheck}
 checkBoxStateChange={ctCheck} */
+
+
+//old version with local-daten from fetch.js
+//const AllTacklesForFisch = tackleArr.find(option => option.fish_name_en === FischTacklesArrItem);

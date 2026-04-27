@@ -1,19 +1,19 @@
 import { Link, useLocation } from 'react-router-dom';
 import style from './FischList.module.css';
 
-const FischList = ({ sublink, tackleArr }) => {
+const FischList = ({ sublink, allFishesArray }) => {
     const location = useLocation();
     return (
         <div className={style.flWrap}>
-            {tackleArr.length > 0 && (
+            {allFishesArray.length > 0 && (
                 <ul>
-                    {tackleArr.map(fish => (
+                    {allFishesArray.map(fish => (
                         <li key={fish.id}>
                             <Link
-                                to={`${sublink ? sublink + fish.loc : fish.loc}`}
+                                to={`${sublink ? sublink + fish.fish_name_en : fish.fish_name_en}`}
                                 state={{ from: location }}
                             >
-                                {fish.name}
+                                {fish.fish_name_ua}
                             </Link>
                         </li>
                     ))}

@@ -4,12 +4,12 @@ import Weather from 'components/Weather/Weather';
 import WeatherWeek from 'components/WeatherWeek/WeatherWeek';
 import style from './home.module.css';
 
-const Home = ({ tackleArr }) => {
-    const tackleArray = tackleArr
+const Home = ({ fishesArr }) => {
+    const fishesArray = fishesArr
 
     return (
         <div className={style.homeWrapp}>
-            <FischList sublink={'fishes/'} tackleArr={tackleArray} />
+            <FischList sublink={'fishes/'} allFishesArray={fishesArray} />
             <div className={style.homeWeatherWrapp}>
                 <Weather />
                 <WeatherWeek />

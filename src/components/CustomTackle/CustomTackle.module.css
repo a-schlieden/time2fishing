@@ -1,7 +1,11 @@
 .ctHead{
     font-size: 20px;
     text-transform: uppercase;
-    color: #6ebc34;
+    color: #fff;
+    background: #178077;
+    padding: 11px;
+    border-radius: 5px;
+    width: 35%;
 }
 
 

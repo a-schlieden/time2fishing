@@ -7,7 +7,7 @@ const FichTackle = ({ tacklesArray, head, fnAddToLS, fnRemoveFromLS, isInLS }) =
         <>
             <h1 className={style.head}>{head}</h1>
             <ul className={style.fischTAckleList}>
-                {tacklesArray.map(tackle => (
+                {tacklesArray?.map(tackle => (
                     <li key={tackle.id} >
                         <input type="checkbox"
                             id={tackle.id}

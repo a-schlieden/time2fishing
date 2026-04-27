@@ -1,7 +1,7 @@
 [
   {
-    "name": "Короп",
-    "loc": "karpfen",
+    "fish_name_ua": "Короп",
+    "fish_name_en": "karpfen",
     "id": 18156,
     "tackle": [
       {
@@ -111,8 +111,8 @@
     ]
   },
   {
-    "name": "Щука",
-    "loc": "hecht",
+    "fish_name_ua": "Щука",
+    "fish_name_en": "hecht",
     "id": 18158,
     "tackle": [
       {
@@ -190,8 +190,8 @@
     ]
   },
   {
-    "name": "Товстолоб",
-    "loc": "silberkarpfen",
+    "fish_name_ua": "Товстолоб",
+    "fish_name_en": "silberkarpfen",
     "id": 181545,
     "tackle": [
       {
@@ -253,8 +253,8 @@
     ]
   },
   {
-    "name": "Плітка/Біла риба/Карась",
-    "loc": "weisfisch",
+    "fish_name_ua": "Плітка/Біла риба/Карась",
+    "fish_name_en": "weisfisch",
     "id": 1815456,
     "tackle": [
       {
