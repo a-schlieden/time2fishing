@@ -13,6 +13,7 @@ import ClearButton from "components/ClearButton/ClearButton";
 
 import style from './fischArtDetails.module.css';
 
+import { fetchTackles } from '../../api/Fetch';
 
 const FischArtDetails = ({ tackleArr }) => {
     const location = useLocation();
@@ -22,7 +23,28 @@ const FischArtDetails = ({ tackleArr }) => {
 
     const AllTacklesForFisch = tackleArr.find(option => option.loc === FischTacklesArrItem);
 
+
+    //console.log("tackleArr local", tackleArr)
+    console.log("AllTacklesForFisch local", AllTacklesForFisch)
+
     const LinkTo = location.state;
+
+    //------------------- Tackles from DB -------------------------
+
+    const [tacklesDB, setTacklesDB] = useState([]);
+
+    useEffect(() => {
+        fetchTackles().then(result => {
+            setTacklesDB(result);
+        });
+    },
+        []);
+
+    const AllTacklesForFischDb = tacklesDB.find(option => option.fish_name_en === FischTacklesArrItem);
+
+    //console.log("tackles DB", tacklesDB)
+    console.log("AllTacklesForFischDb DB", AllTacklesForFischDb)
+
 
     //------------------- Tackles -------------------------
 

@@ -45,6 +45,6 @@ async function fishTackleFetch(url = '') {
         : Promise.reject(new Error('Not found'));
 }
 
-export function fetchTackless() {
+export function fetchTackles() {
     return fishTackleFetch(`${FISCH_TACKLE_URL}`);
 }
