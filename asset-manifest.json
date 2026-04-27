@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/time2fishing/static/css/main.24b1711e.css",
-    "main.js": "/time2fishing/static/js/main.263c4564.js",
+    "main.js": "/time2fishing/static/js/main.9e9810f7.js",
     "static/css/801.cce00496.chunk.css": "/time2fishing/static/css/801.cce00496.chunk.css",
     "static/js/801.f76256c7.chunk.js": "/time2fishing/static/js/801.f76256c7.chunk.js",
-    "static/css/99.41f7578a.chunk.css": "/time2fishing/static/css/99.41f7578a.chunk.css",
-    "static/js/99.56cf88cf.chunk.js": "/time2fishing/static/js/99.56cf88cf.chunk.js",
+    "static/css/475.87cd4303.chunk.css": "/time2fishing/static/css/475.87cd4303.chunk.css",
+    "static/js/475.582105d4.chunk.js": "/time2fishing/static/js/475.582105d4.chunk.js",
     "static/js/690.7430394c.chunk.js": "/time2fishing/static/js/690.7430394c.chunk.js",
     "static/media/fishing.jpg": "/time2fishing/static/media/fishing.3bb7c3e932620ccf647a.jpg",
     "static/media/marka.jpg": "/time2fishing/static/media/marka.2ea8efcbbea28078fe50.jpg",
     "index.html": "/time2fishing/index.html",
     "main.24b1711e.css.map": "/time2fishing/static/css/main.24b1711e.css.map",
-    "main.263c4564.js.map": "/time2fishing/static/js/main.263c4564.js.map",
+    "main.9e9810f7.js.map": "/time2fishing/static/js/main.9e9810f7.js.map",
     "801.cce00496.chunk.css.map": "/time2fishing/static/css/801.cce00496.chunk.css.map",
     "801.f76256c7.chunk.js.map": "/time2fishing/static/js/801.f76256c7.chunk.js.map",
-    "99.41f7578a.chunk.css.map": "/time2fishing/static/css/99.41f7578a.chunk.css.map",
-    "99.56cf88cf.chunk.js.map": "/time2fishing/static/js/99.56cf88cf.chunk.js.map",
+    "475.87cd4303.chunk.css.map": "/time2fishing/static/css/475.87cd4303.chunk.css.map",
+    "475.582105d4.chunk.js.map": "/time2fishing/static/js/475.582105d4.chunk.js.map",
     "690.7430394c.chunk.js.map": "/time2fishing/static/js/690.7430394c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.24b1711e.css",
-    "static/js/main.263c4564.js"
+    "static/js/main.9e9810f7.js"
   ]
 }
